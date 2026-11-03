@@ -1,12 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mi primera web</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ganadería Barcial · Encaste Vega-Villar</title>
+<meta name="description" content="Página informativa sobre la ganadería de bravo Barcial, sus fincas en Salamanca, su historia en Las Ventas y el encaste Vega-Villar.">
+<style>
+  :root { --tierra:#5b3a1e; --crema:#f6efe3; --verde:#3f5a2e; --texto:#2b2118; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Georgia,"Times New Roman",serif; color:var(--texto); background:var(--crema); line-height:1.65; }
+  header { background:linear-gradient(rgba(40,25,10,.65),rgba(40,25,10,.65)),var(--tierra); color:#fff; text-align:center; padding:70px 20px; }
+  header h1 { margin:0 0 10px; font-size:2.4rem; letter-spacing:1px; }
+  header p { margin:0; font-size:1.1rem; opacity:.9; }
+  nav { background:var(--verde); text-align:center; padding:12px; position:sticky; top:0; z-index:5; }
+  nav a { color:#fff; text-decoration:none; margin:0 10px; font-size:.95rem; white-space:nowrap; display:inline-block; }
+  main { max-width:820px; margin:0 auto; padding:30px 20px; }
+  section { margin-bottom:40px; }
+  h2 { color:var(--tierra); border-bottom:2px solid var(--verde); padding-bottom:6px; }
+  h3 { color:var(--verde); margin-bottom:4px; }
+  .tarjeta { background:#fff; border-left:5px solid var(--verde); padding:14px 18px; margin:14px 0; border-radius:6px; box-shadow:0 1px 4px rgba(0,0,0,.08); }
+  .destacada { border-left-color:#a8321e; }
+  .aviso { background:#fff3cd; border:1px solid #e0c36a; padding:12px 16px; border-radius:6px; font-size:.9rem; }
+  .divisa { display:inline-block; width:46px; height:18px; vertical-align:middle; border:1px solid #333; background:linear-gradient(90deg,#fff 50%,#111 50%); margin-left:6px; }
+  .mapa { display:inline-block; margin-top:8px; background:var(--verde); color:#fff !important; padding:8px 14px; border-radius:6px; text-decoration:none; }
+  .nota { font-size:.85rem; color:#5a4a3a; }
+  .telefono { font-size:1.3rem; font-weight:bold; }
+  .toreros { display:flex; flex-wrap:wrap; gap:8px; padding:0; list-style:none; }
+  .toreros li { background:var(--verde); color:#fff; padding:5px 12px; border-radius:20px; font-size:.9rem; }
+  footer { background:var(--tierra); color:#eee; text-align:center; padding:20px; font-size:.85rem; }
+  main a { color:var(--verde); }
+</style>
 </head>
 <body>
-  <h1>Hola, mundo</h1>
-  <p>Esta es mi primera página.</p>
+
+<header>
+  <h1>Ganadería Barcial</h1>
+  <p>Toro bravo del encaste Vega-Villar · Salamanca</p>
+</header>
+
+<nav>
+  <a href="#ganaderia">La ganadería</a>
+  <a href="#historia">Historia</a>
+  <a href="#toro">El toro</a>
+  <a href="#fincas">Fincas</a>
+  <a href="#lidia">En la plaza</a>
+  <a href="#toreros">Toreros</a>
+  <a href="#visita">Visitas</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<main>
+  <div class="aviso">Esta es una página informativa y <strong>no oficial</strong>. No pertenece a la ganadería ni a sus propietarios. Los datos proceden de fuentes públicas.</div>
+
+  <section id="ganaderia">
+    <h2>La ganadería</h2>
+    <p>Barcial pasta en dehesas a unos 20 km de Salamanca. La familia Cobaleda lleva cuidando este toro, considerado único y diferente, durante casi cien años.</p>
+    <div class="tarjeta">
+      <strong>Familia ganadera:</strong> Cobaleda<br>
+      <strong>Encaste:</strong> Vega-Villar<br>
+      <strong>Antigüedad:</strong> 6 de julio de 1924<br>
+      <strong>Asociación:</strong> UCTL (código UFC)<br>
+      <strong>Divisa:</strong> blanca y negra <span class="divisa"></span><br>
+      <strong>Señal:</strong> punta de espada en la oreja derecha y hendido en la izquierda
+    </div>
+  </section>
+
+  <section id="historia">
+    <h2>Historia</h2>
+    <div class="tarjeta"><strong>1910</strong> · José Vega forma la vacada cruzando vacas de Veragua con sementales de Santa Coloma.</div>
+    <div class="tarjeta"><strong>1914</strong> · La ganadería pasa a los hermanos Villar, de donde viene el nombre Vega-Villar.</div>
+    <div class="tarjeta"><strong>1928</strong> · Francisco Villar vende su parte a Arturo Sánchez Cobaleda, que la lleva a sus fincas salmantinas.</div>
+    <div class="tarjeta"><strong>1942</strong> · Tras su muerte, la ganadería pasa a sus cinco hijos.</div>
+    <div class="tarjeta"><strong>1950</strong> · Se divide el ganado. Uno de los lotes corresponde a Jesús Sánchez Cobaleda, que lo anuncia con el nombre de la finca: Barcial.</div>
+    <div class="tarjeta"><strong>1960</strong> · Muere Jesús y la ganadería se reparte entre sus herederos. Una parte llega a Arturo Cobaleda González.</div>
+    <div class="tarjeta"><strong>Hoy</strong> · La quinta generación de la familia, con Jesús Cobaleda al frente, mantiene la ganadería.</div>
+  </section>
+
+  <section id="toro">
+    <h2>El toro Vega-Villar</h2>
+    <p>Son toros bajos, de cuerna fina, cuerpo breve, lomo recto, manos cortas y mucho trapío. Se les reconoce por su pelaje: abundan los berrendos, luceros, calceteros y coleteros, y son frecuentes los cárdenos. Por sus patas blancas se les llama «patas blancas».</p>
+    <p>Se describen como toros serios y con personalidad propia, de actitud humillada.</p>
+  </section>
+
+  <section id="fincas">
+    <h2>Fincas y ubicación</h2>
+    <div class="tarjeta"><strong>La Torre</strong> · San Pedro de Rozados (Salamanca). Dehesa de encinas de unas 550 hectáreas, donde pastan los machos.</div>
+    <div class="tarjeta"><strong>La Matilla</strong> · Beleña (Salamanca). Dehesa de encinas, donde están las hembras.</div>
+    <div class="tarjeta">
+      <strong>Coordenadas de San Pedro de Rozados:</strong><br>
+      40°47′25″ N, 5°44′15″ O (40.79028, -5.73750)<br>
+      <a class="mapa" href="https://www.google.com/maps?q=40.79028,-5.7375" target="_blank" rel="noopener">Ver en el mapa</a>
+    </div>
+  </section>
+
+  <section id="lidia">
+    <h2>En la plaza</h2>
+
+    <h3>Madrid · Las Ventas</h3>
+    <p>Fue una plaza clave para Barcial, sobre todo en las décadas de 1950 y 1960, cuando era un hierro muy buscado por las figuras. Entre 1950 y 1968 triunfaron con sus toros Antonio Ordóñez, Luis Miguel Dominguín, Rafael Ortega y Gregorio Sánchez, y Madrid llegó a programarlos hasta tres veces en un mismo mes.</p>
+    <div class="tarjeta"><strong>18 de mayo de 1960</strong> · Corrida con Manuel González, Antonio Ordóñez y Curro Romero. Los toros pesaron una media de unos 490 kg.</div>
+    <div class="tarjeta destacada"><strong>19 de junio de 1960 · el gran triunfo</strong><br>En la corrida del Montepío de Toreros, Gregorio Sánchez mató él solo los seis toros de Barcial y cortó siete orejas en 68 minutos, saliendo por la Puerta Grande. Se produjo tras la lesión de Fermín Murillo y la indisposición de Antonio Bienvenida.</div>
+
+    <h3>Lisboa</h3>
+    <div class="tarjeta"><strong>21 de septiembre de 2000</strong><br>El torero portugués Rui Bento se despidió lidiando a «Gitano», un toro de Barcial, en la Plaza de Toros de Lisboa.</div>
+  </section>
+
+  <section id="toreros">
+    <h2>Toreros que han lidiado sus toros</h2>
+    <ul class="toreros">
+      <li>Gregorio Sánchez</li>
+      <li>Antonio Ordóñez</li>
+      <li>Luis Miguel Dominguín</li>
+      <li>Rafael Ortega</li>
+      <li>Antonio Bienvenida</li>
+      <li>Aparicio</li>
+      <li>Litri</li>
+      <li>El Cordobés</li>
+      <li>Curro Romero</li>
+      <li>Manuel González</li>
+      <li>Fermín Murillo</li>
+      <li>Rui Bento</li>
+    </ul>
+  </section>
+
+  <section id="visita">
+    <h2>Visitas a la finca</h2>
+    <p>La ganadería ofrece visitas guiadas por los cercados de la finca. Allí se conoce la historia del encaste Vega-Villar y cómo se crían toros y novillos de forma tradicional, en grandes espacios.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <div class="tarjeta">
+      <strong>Teléfono:</strong><br>
+      <a class="telefono" href="tel:+34607230486">607 230 486</a><br>
+      <strong>Ubicación:</strong> San Pedro de Rozados (Salamanca)<br>
+      <strong>Más información:</strong> <a href="https://www.turismocastillayleon.com/es/naturaleza/ganaderia-barcial">Turismo Castilla y León</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Página informativa no oficial · Ganadería Barcial, San Pedro de Rozados (Salamanca)
+</footer>
+
 </body>
 </html>
